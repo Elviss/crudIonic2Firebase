@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
 import { AngularFireModule } from "angularfire2";
+import {ListaCarroPage} from "../pages/lista-carro/lista-carro";
 
 export const firebaseConfig = {
     apiKey: "INSERIR API KEY",
@@ -21,7 +22,8 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+      ListaCarroPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ export const firebaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+      ListaCarroPage
   ],
   providers: [
     StatusBar,
