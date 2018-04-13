@@ -1,1 +1,12 @@
-### :point_right: This starter repo has moved to the [ionic-team/starters](https://github.com/ionic-team/starters/tree/master/ionic-angular/official/blank) repo! :point_left:
+Editar o arquivo src/app/app.module.ts na linha 12 ee colocar os dados do seu projeto no firebird:
+
+```typescript
+export const firebaseConfig = {
+    apiKey: "INSERIR API KEY",
+    authDomain: "INSERIR AUTH DOMAIS",
+    databaseURL: "INSERIR DATABASE URL",
+    projectId: "INSERIR PROJECT ID",
+    storageBucket: "INSERIR STORAGE BUCKET",
+    messagingSenderId: "INSERIR MESSAGING SENDER ID"
+};
+```
