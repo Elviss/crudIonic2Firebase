@@ -12,6 +12,8 @@ import {ListaCarroPage} from "../pages/lista-carro/lista-carro";
 
 import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 
+import {EditaCarroPage} from "../pages/edita-carro/edita-carro";
+
 export const firebaseConfig = {
     apiKey: "INSERIR API KEY",
     authDomain: "INSERIR AUTH DOMAIS",
@@ -25,7 +27,8 @@ export const firebaseConfig = {
   declarations: [
     MyApp,
     HomePage, 
-    ListaCarroPage
+    ListaCarroPage,
+      EditaCarroPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ export const firebaseConfig = {
   entryComponents: [
     MyApp,
     HomePage,
-      ListaCarroPage
+      ListaCarroPage,
+      EditaCarroPage
   ],
   providers: [
     StatusBar,
