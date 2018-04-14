@@ -24,7 +24,7 @@ export class EditaCarroPage {
   constructor(public af: AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams) {
 
       this.id = this.navParams.get('id');
-      this.ref = this.af.database.object('/carros/' + this.id);
+      this.ref = this.af.object('/carros/' + this.id);
       
   }
 
