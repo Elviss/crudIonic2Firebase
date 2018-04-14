@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {IonicPage, ModalController, NavController, NavParams} from 'ionic-angular';
 
 import { AngularFireDatabase, FirebaseListObservable } from "angularfire2/database-deprecated";
+
+import { EditaCarroPage } from "../edita-carro/edita-carro";
 
 export class Carro{
     id: string;
@@ -26,7 +28,7 @@ export class ListaCarroPage {
     lista: FirebaseListObservable<any>;
     carro: Carro;
     
-  constructor(public af: AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public af: AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams, public modal: ModalController) {
       this.lista = this.af.list('/carros');
       this.carro = new Carro();
   }
@@ -41,9 +43,8 @@ export class ListaCarroPage {
       })
   }
 
+  editar(id){
+    this.modal.create(EditaCarroPage, {id: id}).present();
+  }
 }
 
-export class EditaCarroPage {
-    carro: Carro;
-
-}
