@@ -23,10 +23,10 @@ export class Carro{
   templateUrl: 'lista-carro.html',
 })
 export class ListaCarroPage {
-    lista: FirebaseListObservable<any>;
+    lista: FirebaseListObservable<any[]>;
     carro: Carro;
     
-  constructor(private af: AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public af: AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams) {
       this.lista = this.af.list('/carros');
       this.carro = new Carro();
   }
@@ -34,5 +34,16 @@ export class ListaCarroPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListaCarroPage');
   }
+  
+  cadastrar() {
+      this.lista.push(this.carro).then(() => {
+          this.carro = new Carro();
+      })
+  }
+
+}
+
+export class EditaCarroPage {
+    carro: Carro;
 
 }

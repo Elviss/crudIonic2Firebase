@@ -10,6 +10,8 @@ import { HomePage } from '../pages/home/home';
 import { AngularFireModule } from "angularfire2";
 import {ListaCarroPage} from "../pages/lista-carro/lista-carro";
 
+import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
+
 export const firebaseConfig = {
     apiKey: "INSERIR API KEY",
     authDomain: "INSERIR AUTH DOMAIS",
@@ -22,13 +24,14 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-      ListaCarroPage
+    HomePage, 
+    ListaCarroPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
