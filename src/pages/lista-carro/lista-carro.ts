@@ -23,7 +23,7 @@ export class Carro{
   templateUrl: 'lista-carro.html',
 })
 export class ListaCarroPage {
-    lista: FirebaseListObservable<any[]>;
+    lista: FirebaseListObservable<any>;
     carro: Carro;
     
   constructor(public af: AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams) {
