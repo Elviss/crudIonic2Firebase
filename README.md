@@ -1,4 +1,4 @@
-Editar o arquivo src/app/app.module.ts na linha 12 e colocar os dados do seu projeto no firebird:
+Editar o arquivo src/app/app.module.ts na linha 12 e colocar os dados do seu projeto no firebase:
 
 ```typescript
 export const firebaseConfig = {
